@@ -8,10 +8,33 @@
 </head>
 <body>
 
-    <div id="app">
-
+    <div id="app"> </div>
         
-    </div>
+   
     
+    <script>
+
+        const datos = [
+            {nombre: `sebastian` , edad: 30, email: `sebitas0625@gmail.com`},
+            {nombre: `luisa` , edad: 30, email: `sebitas0625@gmail.com`},
+        ];
+        const label= document.getElementById('app');
+
+        // CON EL FOREACH
+
+        datos.forEach(item => {
+            label.innerHTML += `<li> ${item.nombre} - ${item.edad} - ${item.email} </li>`
+            
+        });
+            
+      
+        for (let i =0 ; i < datos.length; i++){
+            const detalle = datos[i];
+        label.innerHTML += `<li> ${detalle.nombre} - ${detalle.edad} - ${detalle.email} </li>`;
+          
+        }
+
+    </script>
+
 </body>
 </html>
