@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>MANeho DE ARRYAS EN JAVASCRIP RETO:</h1>
+
+   
+       
+        <p  id="codigo">
+      
+        <p id="curso">
+
+      <!-- <form action="">
+        <input type="checkbox" name="" id="aprobado">
+    </form> -->
+
+    <div id="formulario"></div>
+
+    
+
+    <script>
+        const cursos = [
+            { codigo : "125" , nombre: "APIS" , calificado: true}
+            // { codigo : 135 , nombre: "Redes" , calificado: false},
+            // { codigo : 145 , nombre: "Algoritmos" , calificado: false},
+        ];
+
+        const formulario = document.getElementById (`formulario`);
+
+        const cod = document.getElementById (`codigo`);
+        const nom = document.getElementById (`curso`);
+        const aprob = document.getElementById(`aprobado`);
+
+        for (let i = 0; i < cursos.length; i++){
+
+            const cur = cursos[i];
+
+            cod.innerText = `${cur.codigo}`;
+            nom.innerText = `${cur.nombre}`;
+
+            formulario.innerHTML += `<input type="checkbox" ${cur.calificado ? 'ckecked' : ''}/>`
+          
+
+           
+        }
+
+
+
+
+        // cursos.forEach(element => {
+           
+             
+        // });
+
+
+    </script>
+    
+</body>
+</html>
