@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <h2>Lista de frutas</h2>
+        <ul id="app" class="list">
+
+        </ul>
+
+    <h2>Lista de tareas</h2>
+        <ul id="acciones" class="list">
+
+        </ul>
+
+  
+   
+        <script>
+
+            const productos = [
+                {
+                    id : 1,
+                    nombre : "platano",
+                    stock: 20,
+                    precio: 1000,
+
+                }
+            ];
+
+            const tareas =[
+                {
+                    id: 3,
+                    descripcion:"comprar frutas",
+                    completado: false,
+                },
+
+                {
+                    id: 4,
+                    descripcion : "comprar verduras",
+                    completado: true,
+                },
+                {
+                    id: 6,
+                    descripcion:"comprar carne",
+                    completado: false,
+                }
+            ];
+
+                //APP DE LOS PRODUCTOS
+            const app = document.getElementById('app');
+
+            productos.forEach(item =>
+            
+            {
+                const list = document.createElement ('li');
+                list.innerHTML +=
+                `
+                <li> codigo:  ${item.id}</li>
+                <li> Descripcion:  ${item.nombre}</li>
+                <li> Stock:  ${item.stock}</li>
+                <li> Precio ${item.precio}</li>
+                
+                `;
+
+
+                app.appendChild(list);
+            });
+            
+
+            const app2 = document.getElementById('acciones');
+
+            tareas.forEach(item => {
+
+                // INSERTANDO DATOS DENTRO DEL CONTENEDOR
+
+                const list2 = document.createElement ('li');
+                list2.innerHTML += 
+                `
+                <span> ${item.id}</span>
+                <span> ${item.descripcion}</span>
+                
+                
+                `;
+
+                const checkbox = document.createElement ('input');
+                checkbox.type ='checkbox';
+                checkbox.id = 'completado';
+                checkbox.name = 'acciones';
+                checkbox.checked = item.completado;
+
+                list2.insertAdjacentElement('afterbegin', checkbox)
+            
+                
+
+
+                acciones.appendChild(list2);
+
+            });
+
+
+
+        </script>
+
+        array con lista de tareas que contenga: titulo / estado y mediante un checkbox decir si esta termminada 
+        o no dependiendo del valor que tenga en la lista
+
+
+    
+    
+
+    
+</body>
+</html>

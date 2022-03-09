@@ -7,7 +7,7 @@
     <title>Document</title>
 </head>
 <body>
-
+    
     <div id="app"> </div>
         
    
@@ -20,23 +20,15 @@
         ];
         const label= document.getElementById('app');
 
-        // CON EL FOREACH
+        // CON EL FOREACH Y EL MAP
 
-        datos.forEach(item => {
-            label.innerHTML += `<li> ${item.nombre} - ${item.edad} - ${item.email} </li>`
+       const listado = datos.map(item => {
+           return`<li> ${item.nombre} - ${item.edad} - ${item.email} </li>`
             
-        });
+        })
+        app.innerHTML =listado.join('')
+
+        </script>
             
-      //CON EL FOR
-        for (let i =0 ; i < datos.length; i++){
-            const detalle = datos[i];
-        label.innerHTML += `<li> ${detalle.nombre} - ${detalle.edad} - ${detalle.email} </li>`;
-          
-        }
-
-    </script>
-
-    
-
 </body>
 </html>
