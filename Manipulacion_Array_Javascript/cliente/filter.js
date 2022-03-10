@@ -29,23 +29,44 @@ const ordenes = [
 
     {
         Nombre : "juan",
+        documento: 1054992167,
         valor: 60000,
         entregado: true,
 
     },
     {
         Nombre : "carlos",
+        documento: 30352856,
         valor: 250000,
-        entregado: true,
+        entregado: false,
 
     },
     {
         Nombre : "luis",
+        documento: 24628377,
         valor: 80000,
         entregado: false,
+
+    },
+    {
+        Nombre : "luisa",
+        documento: 12628377,
+        valor: 125000,
+        entregado: true,
 
     }
     
 ];
-const entregar = ordenes.filter(item => item.entregado);
+const entregar = ordenes.filter(item => item.entregado && item.valor >= 50000);
 console.log('filtrado' , entregar);
+
+//CREANDO UN BUSCADOR CON FILTER por el nombre
+
+const search = (query) =>{
+    return ordenes.filter(item =>{
+
+        return item.Nombre.includes(query);
+
+    })
+}
+console.log(search('xxxd'));
