@@ -14,7 +14,7 @@ for (let i = 0; i < valor.length ; i++){
 console.log ('Sin Reduce : ' + sumatoria);
 
 //AHORA ECON  EL REDUCE que recibe dos parametros que son el arrowfunctionn y el estado inical
-
-const reduce = valor.reduce((recorre, sumatoria) => sumatoria + recorre, 0)//el 0 seria el estado inicial
+const valor2 = [1,5,8,7,4];
+const reduce = valor2.reduce((recorre, sumatoria) => sumatoria + recorre, 0)//el 0 seria el estado inicial
 
 console.log('Con Reduce = ' + reduce);
