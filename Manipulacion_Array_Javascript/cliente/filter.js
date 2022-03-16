@@ -47,5 +47,5 @@ const ordenes = [
     }
     
 ];
-const entregar = ordenes.filter(item => item.entregado);
+const entregar = ordenes.filter(item => item.entregado && item.valor>=50000);
 console.log('filtrado' , entregar);
